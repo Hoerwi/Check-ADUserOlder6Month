@@ -8,7 +8,7 @@ The script identifies AD user accounts that meet the following criteria:
 - Disabled (`Enabled -eq $false`)
 - Expiration date older than 6 months (`AccountExpirationDate -lt $sixMonthsAgo`)
 
-### Accounts that do not have an expiry date and are not deactivated will not be deleted to avoid accidental deletion of service accounts! Only accounts with the conditions Deactivated and Expiry date will be deleted! If one of the conditions is not met, the account will be skipped.
+### Accounts that do not have an expiry date or are not deactivated will not be deleted to avoid accidental deletion of service accounts! Only accounts with the conditions Deactivated and Expiry date will be deleted! If one of the conditions is not met, the account will be skipped.
 
 It logs details of identified accounts and optionally deletes them after user confirmation. Features include:
 - Logging with timestamp and error handling
